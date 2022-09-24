@@ -78,18 +78,21 @@ public class Fraction {
      */
     Fraction reduce() {
 
-        // Find gcd of denominator and numerator and reduce them
-        int gcdResult = gcd(getNumerator(), getDenominator());
-        this.denominator = denominator / gcdResult;
-        this.numerator = numerator / gcdResult;
-
-        // swap minus symbol to numerator if denominator < 0 and numerator > 0
-        if (this.denominator < 0 && this.numerator > 0) {
-            this.denominator = -this.denominator;
-            this.numerator = -this.numerator;
-        }
-
-        return this;
+        int gcd = 1;
+int n = Math.abs(this.numerator);
+int d = Math.abs(this.denominator);
+if (d == 0) {
+gcd = n;
+} else {
+for (int i = 1; i <= n && i <= d; i++) {
+ if (n % i == 0 && d % i == 0) {
+gcd = i;
+}
+}
+ }
+ this.numerator = n / gcd;
+this.denominator = d / gcd;
+ return this;
     }
 
     /**
