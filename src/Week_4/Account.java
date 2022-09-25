@@ -1,4 +1,4 @@
-package src.Week_4;
+package Week_4;
 
 public class Account {
     private double balance;

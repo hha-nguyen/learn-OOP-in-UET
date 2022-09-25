@@ -1,4 +1,4 @@
-package src.Week_2;
+package Week_2;
 
 public class StudentManagement {
     private Student[] students = new Student[100];

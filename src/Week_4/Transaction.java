@@ -1,4 +1,4 @@
-package src.Week_4;
+package Week_4;
 
 public class Transaction {
     private String operation;

@@ -1,4 +1,4 @@
-package src.Week_5;
+package Week_5;
 
 public class Staff extends Person {
     private String school;

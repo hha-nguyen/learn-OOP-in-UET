@@ -1,4 +1,4 @@
-package src.Week_1;
+package Week_1;
 
 public class HelloWorld {
     public static String printHello() {
