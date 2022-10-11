@@ -4,12 +4,12 @@ public class MotorBike extends Vehicle {
     private boolean hasSidecar;
 
     /**
-     * pet.
-     * @param brand a.
-     * @param model a.
-     * @param registrationNumber a.
-     * @param owner a.
-     * @param hasSidecar a.
+     * Constructor.
+     * @param brand brand.
+     * @param model model.
+     * @param registrationNumber resNum.
+     * @param owner owner.
+     * @param hasSidecar hasSideCar status.
      */
     public MotorBike(String brand, String model, String registrationNumber,
                      Person owner, boolean hasSidecar) {
@@ -17,29 +17,32 @@ public class MotorBike extends Vehicle {
         this.hasSidecar = hasSidecar;
     }
 
+    /**
+     * Override getInfo method.
+     * @return Info.
+     */
     @Override
     public String getInfo() {
         return "Motor Bike:\n"
                 + "\tBrand: " + this.brand + "\n"
                 + "\tModel: " + this.model + "\n"
-                + "\tRegistration Number: "
-                + this.registrationNumber + "\n"
+                + "\tRegistration Number: " + this.registrationNumber + "\n"
                 + "\tHas Side Car: " + hasSidecar
                 + "\n" + "\tBelongs to " + owner.getName()
                 + " - " + owner.getAddress();
     }
 
     /**
-     * a.
-     * @return a.
+     * Create getter method for hasSidecar status.
+     * @return hasSidecar status.
      */
     public boolean isHasSidecar() {
         return hasSidecar;
     }
 
     /**
-     * a.
-     * @param hasSidecar a.
+     * Create setter method for hasSidecar status.
+     * @param hasSidecar hasSidecar status.
      */
     public void setHasSidecar(boolean hasSidecar) {
         this.hasSidecar = hasSidecar;

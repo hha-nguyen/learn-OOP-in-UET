@@ -7,11 +7,11 @@ public abstract class Vehicle {
     protected Person owner;
 
     /**
-     * a.
-     * @param brand a.
-     * @param model a.
-     * @param registrationNumber a.
-     * @param owner a.
+     * Create 4-parameter constructor.
+     * @param brand brand.
+     * @param model model.
+     * @param registrationNumber resNum.
+     * @param owner owner.
      */
     public Vehicle(String brand, String model, String registrationNumber, Person owner) {
         this.brand = brand;
@@ -21,49 +21,83 @@ public abstract class Vehicle {
     }
 
     /**
-     * a.
-     * @return a.
+     * Create abstract method to get info.
+     * @return info.
      */
     public abstract String getInfo();
 
     /**
-     * a.
-     * @param newOwner a.
+     * Create transferOwnership method.
+     * @param newOwner new owner.
      */
     public void transferOwnership(Person newOwner) {
         newOwner.addVehicle(this);
-        this.owner.removeVehicle(this.registrationNumber);
+
+        //Change owner.
         this.owner = newOwner;
+        this.owner.removeVehicle(this.registrationNumber);
     }
 
+    /**
+     * Create getter method to get brand.
+     * @return brand name.
+     */
     public String getBrand() {
         return brand;
     }
 
+    /**
+     * Create setter method to set brand.
+     * @param brand brand.
+     */
     public void setBrand(String brand) {
         this.brand = brand;
     }
 
+    /**
+     * Create getter method to get model.
+     * @return model name.
+     */
     public String getModel() {
         return model;
     }
 
+    /**
+     * Create setter method to set model.
+     * @param model model.
+     */
     public void setModel(String model) {
         this.model = model;
     }
 
+    /**
+     * Create getter method to get Registration Number.
+     * @return registration Number.
+     */
     public String getRegistrationNumber() {
         return registrationNumber;
     }
 
+    /**
+     * Create setter method to set resNum.
+     * @param registrationNumber resNum.
+     */
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
 
+    /**
+     * Create getter method to get owner name.
+     * @return owner name.
+     */
     public Person getOwner() {
         return owner;
     }
 
+    /**
+     * Create setter method to set owner name.
+     * @param owner owner name.
+     */
     public void setOwner(Person owner) {
         this.owner = owner;
     }

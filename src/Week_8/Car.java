@@ -1,15 +1,15 @@
 package Week_8;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     private int numberOfDoors;
 
     /**
-     * a.
-     * @param brand a.
-     * @param model a.
-     * @param registrationNumber a.
-     * @param owner a.
-     * @param numberOfDoors a.
+     * Constructor.
+     * @param brand brand.
+     * @param model model.
+     * @param registrationNumber resNum.
+     * @param owner owner.
+     * @param numberOfDoors num of doors.
      */
     public Car(String brand, String model, String registrationNumber,
                Person owner, int numberOfDoors) {
@@ -17,6 +17,10 @@ public class Car extends Vehicle{
         this.numberOfDoors = numberOfDoors;
     }
 
+    /**
+     * Override getInfo method.
+     * @return Info.
+     */
     @Override
     public String getInfo() {
         return "Car:\n"
@@ -28,16 +32,16 @@ public class Car extends Vehicle{
     }
 
     /**
-     * a.
-     * @return a
+     * Create getter method for num of doors.
+     * @return num of doors.
      */
     public int getNumberOfDoors() {
         return numberOfDoors;
     }
 
     /**
-     * a.
-     * @param numberOfDoors a.
+     * Create setter method for num of doors.
+     * @param numberOfDoors num of doors.
      */
     public void setNumberOfDoors(int numberOfDoors) {
         this.numberOfDoors = numberOfDoors;

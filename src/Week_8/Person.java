@@ -9,9 +9,9 @@ public class Person {
         List<Vehicle> vehicleList = new ArrayList<>();
 
         /**
-         * pet.
-         * @param name a.
-         * @param address a.
+         * Constructor.
+         * @param name name.
+         * @param address address.
          */
         public Person(String name, String address) {
             this.name = name;
@@ -19,16 +19,16 @@ public class Person {
         }
 
         /**
-         * a.
-         * @param vehicle a.
+         * Create addVehicle method.
+         * @param vehicle vehicle.
          */
         public void addVehicle(Vehicle vehicle) {
             vehicleList.add(vehicle);
         }
 
         /**
-         * a.
-         * @param registrationNumber a.
+         * Create method to remove vehicle.
+         * @param registrationNumber resNum.
          */
         public void removeVehicle(String registrationNumber) {
             for (int i = 0; i < vehicleList.size(); i++) {
@@ -40,39 +40,59 @@ public class Person {
         }
 
         /**
-         * a.
-         * @return a.
+         * Create method to get vehicle info.
+         * @return info.
          */
         public String getVehiclesInfo() {
             if (vehicleList.isEmpty()) {
                 return name + " has no vehicle!";
             } else {
-                String inf = name + " has:\n\n";
-                for (int i = 0; i < vehicleList.size(); i++) {
-                    inf += vehicleList.get(i).getInfo() + "\n";
+                StringBuilder vehicleInfo = new StringBuilder(name + " has:\n\n");
+                for (Vehicle vehicle : vehicleList) {
+                    vehicleInfo.append(vehicle.getInfo()).append("\n");
                 }
-                return inf;
+                return vehicleInfo.toString();
             }
         }
 
-        public String getName() {
-            return name;
-        }
+    /**
+     * Create getter method for name.
+     * @return name.
+     */
+    public String getName() {
+        return name;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    /**
+     * Create setter method for name.
+     * @param name name.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public String getAddress() {
-            return address;
-        }
+    /**
+     * Create getter method for address.
+     * @return address.
+     */
+    public String getAddress() {
+        return address;
+    }
 
-        public void setAddress(String address) {
-            this.address = address;
-        }
+    /**
+     * Create setter method for address.
+     * @param address address.
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-        @Override
-        public String toString() {
-            return name + " - " + address;
-        }
+    /**
+     * Override toString method.
+     * @return string.
+     */
+    @Override
+    public String toString() {
+        return name + " - " + address;
+    }
 }
